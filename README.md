@@ -32,23 +32,22 @@ Javascript gives us a few different event handlers that can be used.
 
 ### Mouse Click
 
-Lets pretend we wanted to do something every time the user clicked on an image.
-
-Should our examples look like this?
+Let's pretend we wanted to do something every time we click a certain element.
+Here, we have a simplified code snippet that will turn the background of a
+container with an id of `container` green.
 
 ```js
-    let image = document.querySelector("#kitten")
+var container = document.querySelector("#container")
 
-image.onclick = toggleClass;
+container.onclick = changeColorOnClick;
 
-function toggleClass(){
-  if(image.className == 'image'){
-      image.className = ''
-  } else {
-      image.className = 'image'
-  }
+function changeColorOnClick(){
+    container.style.backgroundColor = "green";
 }
 ```
+
+This code could also be easily modified to "toggle"--or switch back and forth,
+between two colors.
 
 ### Key Press
 
@@ -58,29 +57,25 @@ might use include `keypress`, `keydown`, and `keyup`. These events have a
 pasting the following in your JS console in the browser:
 
 ```js
-const input = document.querySelector('input')
-input.addEventListener('keydown', e => console.log(e.which))
+var container = document.querySelector("#container")
+
+container.onkeypress = changeColorOnKeyPress;
+
+function changeColorOnKeyPress(){
+    container.style.backgroundColor = "yellow";
+}
 ```
+This code snippet will change the color of the container with the id of `container`
+to yellow on the event _any_ key being pressed. You can target specific keys with
+this particular event, but we will be discussing `addEventListener` more later.
 
 ### Form Submission
 
 HTML page usually uses a submit button to submit a form to a handling file, such
 as a PHP script. All input values of the form will be transferred to the
 handling file by `post` method. To submit a form to the server manually, we can
-call `form.submit()`.
-
-```js
-let form = document.createElement('form');
-form.action = 'https://google.com/search';
-form.method = 'GET';
-
-form.innerHTML = '<input name="q" value="test">';
-
-// the form must be in the document to submit it
-document.body.append(form);
-
-form.submit();
-```
+call `form.submit()`. There are a number of different ways to code JavaScript into
+forms. We will be showing you one of many in future lessons.
 
 ## Categorize JavaScript Events
 
