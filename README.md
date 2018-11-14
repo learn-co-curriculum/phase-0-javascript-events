@@ -9,22 +9,27 @@
 ## Introduction
 
 We've experimented with selecting and manipulate nodes in the DOM using
-JavaScript. We've also experimented with creating and removing elements.
-Wouldn't it be more interesting if we made those types of thing happen
-when we did something—such as clicked on an element, pushed a button,
-or moved our mouse? Those actions are called "events." In JavaScript we
-can "listen" for events and use them to call functions that update the
-DOM. In this lesson, we'll learn how to do just that.
+JavaScript: deleting nodes, editing nodes, etc. Web applications do work
+like this in response to _events_ to communicate to application users that
+something has changed (moved from "normal" status to "liked" status). So
+a "click" _event_ might trigger the work to change a DOM element from green
+to red.
+
+In JavaScript we
+
+1. Tell DOM nodes to "listen" for events...
+2. ...and when they receive that event they "run" some amount of work
+   stored in a _function_
+
+In this lesson, we'll learn how to do just that. Don't worry if _functions_
+are new to you. We'll cover them in greater depth once you've had a chance to
+work with them.
 
 ## Define a JavaScript Event
 
-JavaScript has event handlers that respond to user actions—user actions
+JavaScript has event handlers that respond to user actions
 such as mouse clicks, key presses, or window resizing. We can define code
 that will be run when those events happen.
-
-JavaScript allows us to bind—or connect—functions to particular events. We
-create a function, and then tell the browser to run that function whenever that
-event happens.
 
 ## Identify Different Types of User Events
 
@@ -35,6 +40,8 @@ Javascript gives us a few different event handlers that can be used.
 Let's pretend we wanted to do something every time we click a certain element.
 Here, we have a simplified code snippet that will turn the background of a
 container with an id of `container` green.
+
+Change to `addEventListener` – here and elsewhere.
 
 ```js
 var container = document.querySelector("#container")
@@ -79,37 +86,28 @@ forms. We will be showing you one of many in future lessons.
 
 ## Categorize JavaScript Events
 
-It is important to note that web events are not part of the core JavaScript
-language—they are defined as part of the JavaScript APIs built into the browser.
-This means that different browsers can often support different sets of events, or
-have different names for them.
+Event-handling code is not unique to JavaScript.
+Most programming languages have some kind of event model. Your mobile device
+knows how to detect screen slide events, device-shake events, and rotation events.
 
-Another thing worth mentioning is that events are not particular to JavaScript.
-Most programming languages have some kind of event model which will often differ
-from JavaScript. Even JavaScript for web is different from JavaScript in other
+Even JavaScript for web is different from JavaScript in other
 environments.
-
-For example, Node.js enables developers to use JavaScript to build network and
-server-side applications. It doesn't sound different, but the code _is_ quite
-different. You can also use JavaScript to build cross-browser add-ons with
-WebExtensions.
-
-You don't need to understand other environments just yet, but these are some
-examples to illustrate that JavaScript events can vary. Don't be alarmed when
-you come across those differences in the future.
 
 ## Conclusion
 
-JavaScript allows us to do amazingly complex stuff with a simple function call.
-Now that you have been given the basics of events to get started, you can explore
-more event handlers! Here's a list of a 
+(you've not intro'd functions yet, using "function call" is a cliff)
+
+JavaScript allows us to do amazingly complex stuff when it detects events.
+
+Common events are are 'scroll', 'mouseenter', 'mouseleave',
+'focus', 'blur',  and 'onchange'. Learn these main events now, but 
+scan the full list occasionally. As you seek to build more complicated applications,
+you'll need to handle and trigger work on more events. Here's a list of a 
 [ton of browser events](http://help.dottoro.com/larrqqck.php).
 
-Some other common events are are 'scroll', 'mouseenter' and 'mouseleave',
-'focus', 'blur',  and 'onchange'. There are lots and lots of events - what
-events do popular websites handle? This might feel intimidating at first, but if
-you familiarize yourself with them all now, you can get the hang of using them
-before you end up needing them for a project task!
+Speaking of triggering work, the work that handled events trigger is stored in
+_functions_. It's time to dive deeply into this core element of the JavaScript language.
+
 
 ## Resources
 
