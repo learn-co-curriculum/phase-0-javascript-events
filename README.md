@@ -9,31 +9,31 @@
 ## Introduction
 
 We've experimented with selecting and manipulate nodes in the DOM using
-JavaScript: deleting nodes, editing nodes, etc. Web applications do work
-like this in response to _events_ to communicate to application users that
-something has changed (moved from "normal" status to "liked" status). So
-a "click" _event_ might trigger the work to change a DOM element from green
-to red.
+JavaScript: deleting nodes, editing nodes, etc. But most web applications are
+not used by people opening up the console and editing the DOM directly :).
+Instead, people _do something_ and then _work happens_.
 
-In JavaScript we
+In JavaScript we tell DOM Nodes to "listen" for someone "doing something." This
+is called an "event." In the "Simple Liker" application we're listening for
+someone to "click on the heart icon." In response to someone _doing something_,
+JavaScript "does work." In JavaScript we bundle work, like what we learned to
+do in the JavaScript console, inside a holder of work called a "function."
+We'll explore functions and how to write them shortly, but for the moment you
+can think of them as a way to define work, _but not do it_..._yet_.
 
-1. Tell DOM nodes to "listen" for events...
-2. ...and when they receive that event they "run" some amount of work
-   stored in a _function_
-
-In this lesson, we'll learn how to do just that. Don't worry if _functions_
-are new to you. We'll cover them in greater depth once you've had a chance to
-work with them.
+Listening for events and triggering work when they're "noticed" is called
+"event handling."
 
 ## Define a JavaScript Event
 
-JavaScript has event handlers that respond to user actions
-such as mouse clicks, key presses, or window resizing. We can define code
-that will be run when those events happen.
+JavaScript has the ability to "listen" on DOM nodes to whether an "event"
+happens to that node. The simplest is "click." By setting up an "event
+listener" on a DOM node, we're halfway to having "handled the event." We'll
+cover a few more common types of events below.
 
 ## Identify Different Types of User Events
 
-Javascript gives us a few different event handlers that can be used.
+JavaScript gives us a few different event handlers that can be used.
 
 ### Mouse Click
 
@@ -41,7 +41,7 @@ Let's pretend we wanted to do something every time we click a certain element.
 Here, we have a simplified code snippet that will turn the background of a
 container with an id of `container` green.
 
-Change to `addEventListener` – here and elsewhere.
+KELLYE: Change to `addEventListener` – here and elsewhere.
 
 ```js
 var container = document.querySelector("#container")
@@ -54,7 +54,9 @@ function changeColorOnClick(){
 ```
 
 This code could also be easily modified to "toggle"--or switch back and forth,
-between two colors.
+between two colors. The mouse is a primary user interface tool for web sites:
+handling these pointer device (mouse, finger) events is a skill you must
+master.
 
 ### Key Press
 
@@ -72,42 +74,39 @@ function changeColorOnKeyPress(){
     container.style.backgroundColor = "yellow";
 }
 ```
-This code snippet will change the color of the container with the id of `container`
-to yellow on the event _any_ key being pressed. You can target specific keys with
-this particular event, but we will be discussing `addEventListener` more later.
+
+This code snippet will change the color of the container with the id of
+`container` to yellow on the event _any_ key being pressed. If ever you want to
+make a browser-based game, you're going to want to be comfortable with handling
+key events.
 
 ### Form Submission
 
-HTML page usually uses a submit button to submit a form to a handling file, such
-as a PHP script. All input values of the form will be transferred to the
-handling file by `post` method. To submit a form to the server manually, we can
-call `form.submit()`. There are a number of different ways to code JavaScript into
-forms. We will be showing you one of many in future lessons.
+HTML pages often use a submit button to submit a form to a server.  All
+`<input>` values of the `<form>` will be transferred to the server. When a user
+submits a form, the `submit` event is fired. An event handler here might pop up
+a thank you overlay, play a song, or provide some other sort of interactivity.
+
+### List of Events
+
+As you seek to build more complicated applications, you'll need to handle and
+trigger work on more events. Here's a list of a [ton of browser
+events][list].
 
 ## Categorize JavaScript Events
 
-Event-handling code is not unique to JavaScript.
-Most programming languages have some kind of event model. Your mobile device
-knows how to detect screen slide events, device-shake events, and rotation events.
-
-Even JavaScript for web is different from JavaScript in other
-environments.
+Event-handling code is not unique to JavaScript.  Most programming languages
+have some kind of event model. Your mobile device knows how to detect screen
+slide events, device-shake events, and rotation events.
 
 ## Conclusion
 
-(you've not intro'd functions yet, using "function call" is a cliff)
-
-JavaScript allows us to do amazingly complex stuff when it detects events.
-
-Common events are are 'scroll', 'mouseenter', 'mouseleave',
-'focus', 'blur',  and 'onchange'. Learn these main events now, but 
-scan the full list occasionally. As you seek to build more complicated applications,
-you'll need to handle and trigger work on more events. Here's a list of a 
-[ton of browser events](http://help.dottoro.com/larrqqck.php).
-
-Speaking of triggering work, the work that handled events trigger is stored in
-_functions_. It's time to dive deeply into this core element of the JavaScript language.
-
+JavaScript allows us to trigger work when it detects events.  Common events are
+are 'scroll', 'mouseenter', 'mouseleave', 'focus', 'blur', and 'onchange'.
+When JavaScript recognizes an event that applies to a "event handler" that has
+been set up, it will execute that "handler's" work, which is stored in a
+function. While you've seen `function`s in this lesson, we'll make a deep dive
+into them in the next lesson.
 
 ## Resources
 
@@ -120,3 +119,4 @@ _functions_. It's time to dive deeply into this core element of the JavaScript l
 [MDN]: https://developer.mozilla.org/en-US/docs/Web/Events
 [SO]: http://stackoverflow.com/questions/4616694/what-is-event-bubbling-and-capturing
 [QM]: http://www.quirksmode.org/js/events_order.html
+[list]: http://help.dottoro.com/larrqqck.php
