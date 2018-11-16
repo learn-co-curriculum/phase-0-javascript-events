@@ -106,7 +106,7 @@ more event handlers! Here's a list of a
 [ton of browser events](http://help.dottoro.com/larrqqck.php).
 
 Some other common events are are `scroll`, `mouseenter` and `mouseleave`,
-`focus`, `blur`,  and 'onchange'. There are lots and lots of events - what
+`focus`, `blur`,  and `onchange`. There are lots and lots of events - what
 events do popular websites handle? This might feel intimidating at first, but if
 you familiarize yourself with them all now, you can get the hang of using them
 before you end up needing them for a project task!
