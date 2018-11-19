@@ -71,10 +71,12 @@ been set up, it will execute that "handler's" work, which is stored in a
 _callback function_. While you've seen `function`s in this lesson, we'll make a deep dive
 into them in the next lesson.
 
-By the way, event-handling is not unique to JavaScript.  Most programming languages
-have some kind of event model. Consider your mobile device: it knows how to detect screen
-slide events, device-shake events, and rotation events. Getting comfortable with 
-handling events is essential.
+Some other common events are are `scroll`, `mouseenter` and `mouseleave`,
+`focus`, `blur`,  and `onchange`. There are lots and lots of events - what
+events do popular websites handle? This might feel intimidating at first, but if
+you familiarize yourself with them all now, you can get the hang of using them
+before you end up needing them for a project task!
+
 
 ## Resources
 
