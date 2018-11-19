@@ -4,88 +4,56 @@
 
 * Define a JavaScript event
 * Identify different types of user events
-* Categorize JavaScript events
 
 ## Introduction
 
 We've experimented with selecting and manipulate nodes in the DOM using
 JavaScript: deleting nodes, editing nodes, etc. But most web applications are
-not used by people opening up the console and editing the DOM directly :).
-Instead, people _do something_ and then _work happens_.
+_not_ used by people opening up the console and editing the DOM using Chrome's
+DevTools :). Instead, people _do something_ and then _work happens_.
 
-In JavaScript we tell DOM Nodes to "listen" for someone "doing something." This
-is called an "event." In the "Simple Liker" application we're listening for
-someone to "click on the heart icon." In response to someone _doing something_,
-JavaScript "does work." In JavaScript we bundle work, like what we learned to
-do in the JavaScript console, inside a holder of work called a "function."
-We'll explore functions and how to write them shortly, but for the moment you
-can think of them as a way to define work, _but not do it_..._yet_.
+"Doing work" in response to "something happening" is known as _event handling_.
+_Events_ are the "something that happens" and the "_callback function_" is the
+work that will happen in response to the event being triggered. In this lesson
+we'll focus on the first half of that relationship: the event. We'll discuss
+the second half, the "callback function," or, "callback" in a later lesson.
 
-Listening for events and triggering work when they're "noticed" is called
-"event handling."
+We'll explore this relationship in this document.
 
 ## Define a JavaScript Event
 
-JavaScript has the ability to "listen" on DOM nodes to whether an "event"
-happens to that node. The simplest is "click." By setting up an "event
-listener" on a DOM node, we're halfway to having "handled the event." We'll
-cover a few more common types of events below.
+JavaScript has the ability to "listen" for things that happen inside the
+browser. It can listen for events like whether the browser resized, or
+whether someone clicked on a specific image on the screen. The event you're
+probably most familiar with is "click."
+
+We'll cover a few more common types of events below.
 
 ## Identify Different Types of User Events
 
-JavaScript gives us a few different event handlers that can be used.
+Let's take a look at some of the more common events.
 
 ### Mouse Click
 
-Let's pretend we wanted to do something every time we click a certain element.
-Here, we have a simplified code snippet that will turn the background of a
-container with an id of `container` green.
-
-KELLYE: Change to `addEventListener` – here and elsewhere.
-
-```js
-var container = document.querySelector("#container")
-
-container.onclick = changeColorOnClick;
-
-function changeColorOnClick(){
-    container.style.backgroundColor = "green";
-}
-```
-
-This code could also be easily modified to "toggle"--or switch back and forth,
-between two colors. The mouse is a primary user interface tool for web sites:
-handling these pointer device (mouse, finger) events is a skill you must
-master.
+The mouse / trackpad is a primary pointing device when working with
+browsers. In response to click, double-click, right-click, etc. we
+can do work like, changing the background of the document to a random
+color every time someone clicks on the page.
 
 ### Key Press
 
-Click events make up the majority of events you'll use, but other events you
-might use include `keypress`, `keydown`, and `keyup`. These events have a
-`which` property that tells us which key was pressed. Try it out by copying and
-pasting the following in your JS console in the browser:
-
-```js
-var container = document.querySelector("#container")
-
-container.onkeypress = changeColorOnKeyPress;
-
-function changeColorOnKeyPress(){
-    container.style.backgroundColor = "yellow";
-}
-```
-
-This code snippet will change the color of the container with the id of
-`container` to yellow on the event _any_ key being pressed. If ever you want to
-make a browser-based game, you're going to want to be comfortable with handling
-key events.
+While click events make up the majority of events you'll use, the
+keyboard is _also_ an important source of events. We can listen
+for `keypress`, `keydown`, and `keyup`. When these events are handled,
+we can find out which keys were pressed (like if a space was hit to make
+the character jump over the hole).
 
 ### Form Submission
 
-HTML pages often use a submit button to submit a form to a server.  All
-`<input>` values of the `<form>` will be transferred to the server. When a user
+HTML pages often use a submit button to submit a form to a server. When a user
 submits a form, the `submit` event is fired. An event handler here might pop up
-a thank you overlay, play a song, or provide some other sort of interactivity.
+a thank you overlay, play a song, or provide some other sort of interactivity 
+depending on what values were entered in the form.
 
 ### List of Events
 
@@ -93,11 +61,6 @@ As you seek to build more complicated applications, you'll need to handle and
 trigger work on more events. Here's a list of a [ton of browser
 events][list].
 
-## Categorize JavaScript Events
-
-Event-handling code is not unique to JavaScript.  Most programming languages
-have some kind of event model. Your mobile device knows how to detect screen
-slide events, device-shake events, and rotation events.
 
 ## Conclusion
 
@@ -105,8 +68,13 @@ JavaScript allows us to trigger work when it detects events.  Common events are
 are 'scroll', 'mouseenter', 'mouseleave', 'focus', 'blur', and 'onchange'.
 When JavaScript recognizes an event that applies to a "event handler" that has
 been set up, it will execute that "handler's" work, which is stored in a
-function. While you've seen `function`s in this lesson, we'll make a deep dive
+_callback function_. While you've seen `function`s in this lesson, we'll make a deep dive
 into them in the next lesson.
+
+By the way, event-handling is not unique to JavaScript.  Most programming languages
+have some kind of event model. Consider your mobile device: it knows how to detect screen
+slide events, device-shake events, and rotation events. Getting comfortable with 
+handling events is essential.
 
 ## Resources
 
