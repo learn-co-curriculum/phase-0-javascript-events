@@ -64,19 +64,13 @@ events][list].
 
 ## Conclusion
 
-JavaScript allows us to trigger work when it detects events.  Common events are
-are 'scroll', 'mouseenter', 'mouseleave', 'focus', 'blur', and 'onchange'.
-When JavaScript recognizes an event that applies to a "event handler" that has
-been set up, it will execute that "handler's" work, which is stored in a
-_callback function_. While you've seen `function`s in this lesson, we'll make a deep dive
-into them in the next lesson.
-
-Some other common events are are `scroll`, `mouseenter` and `mouseleave`,
-`focus`, `blur`,  and `onchange`. There are lots and lots of events - what
-events do popular websites handle? This might feel intimidating at first, but if
-you familiarize yourself with them all now, you can get the hang of using them
-before you end up needing them for a project task!
-
+JavaScript allows us to trigger work when it detects events.  Some other common
+events are are `scroll`, `mouseenter` and `mouseleave`, `focus`, `blur`,  and
+`onchange`. There are lots and lots of events - what events do popular websites handle?
+When JavaScript recognizes an event that applies to a "event handler" that has been set
+up, it will execute that "handler's" work, which is stored in a _callback function_.
+This might feel intimidating at first, but if you familiarize yourself with them all now,
+you can get the hang of using them before you end up needing them for a project task!
 
 ## Resources
 
