@@ -7,7 +7,7 @@
 
 ## Introduction
 
-We've experimented with selecting and manipulate nodes in the DOM using
+We've experimented with selecting and manipulating nodes in the DOM using
 JavaScript: deleting nodes, editing nodes, etc. But most web applications are
 _not_ used by people opening up the console and editing the DOM using Chrome's
 DevTools :). Instead, people _do something_ and then _work happens_.
@@ -65,7 +65,7 @@ events][list].
 ## Conclusion
 
 JavaScript allows us to trigger work when it detects events.  Some other common
-events are are `scroll`, `mouseenter` and `mouseleave`, `focus`, `blur`,  and
+events are `scroll`, `mouseenter` and `mouseleave`, `focus`, `blur`,  and
 `onchange`. There are lots and lots of events - what events do popular websites handle?
 When JavaScript recognizes an event that applies to a "event handler" that has been set
 up, it will execute that "handler's" work, which is stored in a _callback function_.
