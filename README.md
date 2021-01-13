@@ -1,4 +1,4 @@
-# How to Leverage JavaScript Events
+# JavaScript Events
 
 ## Learning Goals
 
@@ -72,10 +72,9 @@ events][list] includes the ones that can be used in most browsers.
 
 ## Conclusion
 
-JavaScript allows us to trigger work when it detects events. There are lots of
-events that you can handle using JavaScript. You set up an event handler and,
-when JavaScript recognizes that event, it will execute the event handler's work,
-which is stored in a _callback function_.
+JavaScript allows us to trigger work when it detects events. You set up an event
+handler and, when JavaScript recognizes that event, it will execute the event
+handler's work, which is stored in a _callback function_.
 
 Take a few minutes to look through the [list of common events][list] to
 familiarize yourself with the many many ways you can use event handling to
@@ -84,11 +83,7 @@ enhance your users' experience.
 ## Resources
 
 * [MDN - Web Events][MDN]
-* [StackOverflow - Bubbling and Capturing][SO]
-* [QuirksMode - Event order][QM]
 
-[SO]: http://stackoverflow.com/questions/4616694/what-is-event-bubbling-and-capturing
-[QM]: http://www.quirksmode.org/js/events_order.html
 [mouse]: https://developer.mozilla.org/en-US/docs/Web/Events#Mouse_events
 [keyboard]: https://developer.mozilla.org/en-US/docs/Web/Events#Keyboard_events
 [list]: https://developer.mozilla.org/en-US/docs/Web/Events#standard_events
