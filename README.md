@@ -46,29 +46,30 @@ JavaScript's [mouse events here][mouse].
 
 ### Key Press
 
-While click events make up the majority of events you'll use, the keyboard is
-another important source of events. JavaScript currently includes two [keyboard
-events][keyboard]: `keydown` and `keyup`. (A third, `keypress`, has been
-deprecated.) When a key is pressed, these events provide a code to indicate
-which key it was. For example, a game program might listen for `keydown` events
-and, if the space bar was pressed, make the character jump over the hole.
+While click events will likely make up the majority of events you'll use, the
+keyboard is another important source of events. JavaScript currently includes
+two [keyboard events][keyboard]: `keydown` and `keyup`. (A third, `keypress`,
+has been deprecated.) When a key is pressed, these events provide a code to
+indicate which key it was. For example, a game program might listen for
+`keydown` events and, if the space bar was pressed, make the character jump over
+the hole.
 
 ### Form Submission
 
 HTML pages often use a submit button to submit a form to a server. When a user
 submits a form, the `submit` event is fired. An event handler here might pop up
-a thank you overlay or log the user in and take them to their home page.
+a thank you overlay or log in the user and take them to their home page.
 
-### Other Types of Events
-
-These are just a few of the most common types of events you'll be handling using
-JavaScript. Some other common events are `scroll`, `mouseenter` and
-`mouseleave`, `focus`, `blur`,  and `onchange`.
+### Other Events
 
 As you seek to build more complicated applications, you'll need to handle and
-trigger work on many more events. One important thing to keep in mind is that
-not all JavaScript events are supported by all browsers. This [list of browser
-events][list] includes the ones that can be used in most browsers.
+trigger work on many more events than the few we've discussed in this lesson.
+Some other common events you are likely to encounter are `scroll`, `mouseenter`
+and `mouseleave`, `focus`, `blur`,  and `onchange`.
+
+One important thing to keep in mind is that not all JavaScript events are
+supported by all browsers. This [list of browser events][list] includes the ones
+that can be used in most browsers.
 
 ## Conclusion
 
