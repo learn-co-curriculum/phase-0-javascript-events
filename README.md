@@ -84,8 +84,10 @@ enhance your users' experience.
 ## Resources
 
 * [MDN - Web Events][MDN]
+* [MDN - Mouse Events][mouse]
+* [MDN - Keyboard Events][keyboard]
 
-[mouse]: https://developer.mozilla.org/en-US/docs/Web/Events#Mouse_events
-[keyboard]: https://developer.mozilla.org/en-US/docs/Web/Events#Keyboard_events
+[mouse]: https://developer.mozilla.org/en-US/docs/Web/API/Element#mouse_events
+[keyboard]: https://developer.mozilla.org/en-US/docs/Web/API/Element#keyboard_events
 [list]: https://developer.mozilla.org/en-US/docs/Web/Events#standard_events
 [MDN]: https://developer.mozilla.org/en-US/docs/Web/Events
